@@ -1,0 +1,1536 @@
+2020-05-22 14:39:24 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2020-05-22 14:47:30 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2020-05-22 14:47:32 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2020-05-22 14:51:20 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2020-05-22 14:55:44 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------
+2020-05-22 15:25:28 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Bigshop Theme
+
+FILE: catalog/controller/extension/module/slideshow.php
+CODE: $data['banners'] = array();
+LINE: 12
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/extension/module/bigshop_product_tab.php
+CODE: $data['products'] = array();
+LINE: 201
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'] = array();
+LINE: 22
+
+FILE: catalog/controller/product/category.php
+CODE: $this->load->model('tool/image');
+LINE: 15
+
+FILE: catalog/controller/product/product.php
+CODE: $this->load->model('tool/image');
+LINE: 303
+
+FILE: catalog/controller/product/search.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/special.php
+CODE: public function index() {
+LINE: 6
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: if ($manufacturer_info) {
+LINE: 122
+
+FILE: catalog/controller/common/language.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/currency.php
+CODE: public function index() {
+LINE: 3
+
+FILE: catalog/controller/common/footer.php
+CODE: $data['newsletter'] = $this->url->link('account/newsletter', '', true);
+LINE: 185
+
+FILE: catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 320
+CODE: public function index() {
+LINE: 17
+CODE: $children_data[] = array(
+LINE: 428
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 429
+CODE: 'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+LINE: 430
+CODE: $data['text_checkout'] = $this->language->get('text_checkout');
+LINE: 371
+CODE: $data['checkout'] = $this->url->link('checkout/checkout', '', true);
+LINE: 400
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 53
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 55
+CODE: $this->load->model('catalog/information');
+LINE: 25
+CODE: $data['categories'][] = array(
+LINE: 180
+CODE: 'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+LINE: 182
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 67
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 74
+CODE: 'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 242
+CODE: 'href'        => $this->url->link('product/product', 'manufacturer_id=' . $result['manufacturer_id'] . '&product_id=' . $result['product_id'] . $url)
+LINE: 247
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+LINE: 472
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 260
+CODE: 'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+LINE: 145
+
+FILE: catalog/controller/extension/module/carousel.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+
+FILE: catalog/controller/extension/module/banner.php
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->load->model('catalog/product');
+LINE: 15
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+LINE: 8
+CODE: foreach ($results as $result) {
+LINE: 326
+LINE: 439
+LINE: 612
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 240
+
+FILE: catalog/view/theme/bigshop/template/product/product.tpl
+CODE: <li><b><?php echo $text_stock; ?></b> <?php echo $stock; ?></li>
+LINE: 120
+CODE: if ($product_info['quantity'] <= 0) {
+LINE: 285
+CODE: $product_info = $this->model_catalog_product->getProduct($product_id);
+LINE: 159
+LINE: 700
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: <i class="fa fa-home"></i>
+LINE: 12
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 2
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: <?php
+LINE: 2
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 18
+CODE: $this->load->model('tool/image');
+LINE: 51
+
+FILE: catalog/controller/common/content_top.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_right.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+
+FILE: catalog/controller/common/column_left.php
+CODE: $setting_info = $this->model_extension_module->getModule($part[1]);
+LINE: 60
+----------------------------------------------------------------
+MOD: fondy_payment
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: public function index() {
+LINE: 11
+
+FILE: catalog/view/theme/default/template/checkout/checkout.tpl
+CODE: <h1><?php echo $heading_title; ?></h1>
+LINE: 26
+----------------------------------------------------------------
+MOD: OcStore 2.3.x track number
+
+FILE: admin/controller/sale/order.php
+CODE: $data['shipping_method'] = $order_info['shipping_method'];
+LINE: 567
+LINE: 942
+CODE: public function history() {
+LINE: 1545
+
+FILE: admin/model/sale/order.php
+CODE: $order_query->row['order_id'],
+LINE: 96
+
+FILE: catalog/model/checkout/order.php
+CODE: $order_query->row['order_id'],
+LINE: 170
+
+FILE: admin/view/template/sale/order_info.tpl
+CODE: <td><?php echo $text_reward; ?></td>
+LINE: 100
+CODE: <?php echo $footer; ?>
+LINE: 700
+
+FILE: catalog/model/account/order.php
+CODE: $order_query->row['order_id'],
+LINE: 46
+
+FILE: catalog/controller/account/order.php
+CODE: if ($order_info['invoice_no']) {
+LINE: 210
+
+FILE: catalog/view/theme/default/template/account/order_info.tpl
+CODE: <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
+LINE: 49
+----------------------------------------------------------------

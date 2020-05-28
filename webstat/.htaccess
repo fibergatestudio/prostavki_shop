@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/prostavki-shop.com.ua/webstat"
+AuthUserFile /var/www/vikki/data/etc/54926187.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>
